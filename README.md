@@ -5,6 +5,6 @@
 
 作業網站: https://mdecad2024.github.io/hw-41223136/content/About.html
 
-作業倉儲:https://github.com/mdecycu/cad2024_hw 
+作業倉儲: https://mdecad2024.github.io/hw-41223136/ 
 
 其他資訊: 請自行填入其他相關資料
