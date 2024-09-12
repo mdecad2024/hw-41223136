@@ -44,7 +44,29 @@
 <p style="padding-left: 30px;">所完成的零件檔案下載</p>
 <p>零件考試題目以 NX2312 繪圖操作過程影片如下:</p>
 <p style="padding-left: 30px;">請將操作影片嵌入 ......</p>
-<p style="padding-left: 30px;">所完成的零件檔案下載</p><h1>HW2</h1>
+<p style="padding-left: 30px;">所完成的零件檔案下載</p>
+<h2>上課內容</h2>
+<p>2a w1 有關 Codespaces 應用:</p>
+<p>demo 倉儲: <a href="https://github.com/mdecad2024/hw-41223136">https://github.com/mdecad2024/hw-41223136</a></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-uDxR4YUQJo?si=DAffzHn49l4a3_uC" title="YouTube video player" width="560"></iframe></p>
+<p>NX2312 啟動設定:</p>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">REM for NX2312, must after path setup 
+set SPLM_LICENSE_SERVER=29000@認證主機
+set UGII_LANG=english
+set UGS_LICENSE_BUNDLE=ACD11,ACD10
+set UGII_BASE_DIR=%Disk%:\NX\
+set UGII_TMP_DIR=%Disk%:\NX\temp
+set UGII_LIB_PATH=%Disk%:\NX\NXBIN\python
+set ugii=%Disk%:\NX\ugii;%Disk%:\NX\nxbin;
+path = %ugii%;%path%
+Xcopy %Disk%:\home_ipv6\AppData\Local\Siemens\NX2312 C:\users\%USERNAME%\AppData\Local\Siemens\NX2312 /E /H /C /I /Y
+ 
+REM 決定是否開啟 nx GUI 介面
+REM start ugraf -nx
+ 
+REM 以下指令可以直接呼叫 NXOpen Python 程式進行繪圖組立與其他相關流程
+python %Disk%:\tmp\nx_ex\new_part.py</pre>
+<p></p><h1>HW2</h1>
 <p>Homework 2 (10%):</p>
 <p style="padding-left: 30px;">利用 Solvespace 與 NX 建立 <a href="https://mde.tw/cad2024/content/BonW.html">Balance on Wheels</a> 組立件</p>
 <hr/>
