@@ -50,24 +50,22 @@
 <p>demo 倉儲: <a href="https://github.com/mdecad2024/hw-41223136">https://github.com/mdecad2024/hw-41223136</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-uDxR4YUQJo?si=DAffzHn49l4a3_uC" title="YouTube video player" width="560"></iframe></p>
 <p>NX2312 啟動設定:</p>
-<div class="container">
-<div class="line number1 index0 alt2"><code class="js plain">REM </code><code class="js keyword">for</code> <code class="js plain">NX2312, must after path setup </code></div>
-<div class="line number2 index1 alt1"><code class="js plain">set SPLM_LICENSE_SERVER=29000@認證主機</code></div>
-<div class="line number3 index2 alt2"><code class="js plain">set UGII_LANG=english</code></div>
-<div class="line number4 index3 alt1"><code class="js plain">set UGS_LICENSE_BUNDLE=ACD11,ACD10</code></div>
-<div class="line number5 index4 alt2"><code class="js plain">set UGII_BASE_DIR=%Disk%:\NX\</code></div>
-<div class="line number6 index5 alt1"><code class="js plain">set UGII_TMP_DIR=%Disk%:\NX\temp</code></div>
-<div class="line number7 index6 alt2"><code class="js plain">set UGII_LIB_PATH=%Disk%:\NX\NXBIN\python</code></div>
-<div class="line number8 index7 alt1"><code class="js plain">set ugii=%Disk%:\NX\ugii;%Disk%:\NX\nxbin;</code></div>
-<div class="line number9 index8 alt2"><code class="js plain">path = %ugii%;%path%</code></div>
-<div class="line number10 index9 alt1"><code class="js plain">Xcopy %Disk%:\home_ipv6\AppData\Local\Siemens\NX2312 C:\users\%USERNAME%\AppData\Local\Siemens\NX2312 /E /H /C /I /Y</code></div>
-<div class="line number11 index10 alt2"> </div>
-<div class="line number12 index11 alt1"><code class="js plain">REM 決定是否開啟 nx GUI 介面</code></div>
-<div class="line number13 index12 alt2"><code class="js plain">REM start ugraf -nx</code></div>
-<div class="line number14 index13 alt1"> </div>
-<div class="line number15 index14 alt2"><code class="js plain">REM 以下指令可以直接呼叫 NXOpen Python 程式進行繪圖組立與其他相關流程</code></div>
-<div class="line number16 index15 alt1"><code class="js plain">python %Disk%:\tmp\nx_ex\new_part.py</code></div>
-</div>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">REM for NX2312, must after path setup 
+set SPLM_LICENSE_SERVER=29000@認證主機
+set UGII_LANG=english
+set UGS_LICENSE_BUNDLE=ACD11,ACD10
+set UGII_BASE_DIR=%Disk%:\NX\
+set UGII_TMP_DIR=%Disk%:\NX\temp
+set UGII_LIB_PATH=%Disk%:\NX\NXBIN\python
+set ugii=%Disk%:\NX\ugii;%Disk%:\NX\nxbin;
+path = %ugii%;%path%
+Xcopy %Disk%:\home_ipv6\AppData\Local\Siemens\NX2312 C:\users\%USERNAME%\AppData\Local\Siemens\NX2312 /E /H /C /I /Y
+ 
+REM 決定是否開啟 nx GUI 介面
+REM start ugraf -nx
+ 
+REM 以下指令可以直接呼叫 NXOpen Python 程式進行繪圖組立與其他相關流程
+python %Disk%:\tmp\nx_ex\new_part.py</pre>
 <p></p><h1>HW2</h1>
 <p>Homework 2 (10%):</p>
 <p style="padding-left: 30px;">利用 Solvespace 與 NX 建立 <a href="https://mde.tw/cad2024/content/BonW.html">Balance on Wheels</a> 組立件</p>
