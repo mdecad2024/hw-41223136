@@ -41,7 +41,7 @@
 <p>
 <script src="/static/jsc3d.js" type="text/javascript"></script>
 </p>
-<div id="models"><canvas height="300" id="cv1" style="border: 1px solid;" width="400"></canvas> <!-- 可以添加更多的 canvas --></div>
+<div id="models"><canvas height="400" id="cv1" style="border: 1px solid;" width="500"></canvas> <!-- 可以添加更多的 canvas --></div>
 <div style="width: 400px; height: 70px; border: 1px solid;">Model Color:<input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1:<input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2:<input id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
 <option>Flat</option>
 <option>Point</option>
@@ -103,6 +103,7 @@ function openByUrl(){
 function openByGet(){
     var urls = [
         "https://41223136@s104.cycu.org/~41223136/41223136_part1.stl",
+       
     ];
     var opt = getOptions();
     urls.forEach((url, index) => {
@@ -113,7 +114,10 @@ function openByGet(){
 
 openByGet();
 </script>
-</p><h1>cmsimde</h1>
+</p>
+<p></p>
+<p>如何將圖檔放在s104.cycu.org上:</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3Cimn3-Trc4?si=7D5e657oWGk_ray1" title="YouTube video player" width="560"></iframe></p><h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
