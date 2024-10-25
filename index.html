@@ -1,7 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="refresh" content="0; url=content/index.html" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Page</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "xueru_106062") {  // 替換成你想要的密碼
+                window.location.href = "content/index.html";  // 成功后跳轉到的頁面
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
 </head>
 <body>
+    <div id="password-form">
+        <h2>This page is password protected</h2>
+        <input type="password" id="password" placeholder="Enter password" />
+        <button onclick="checkPassword()">Submit</button>
+    </div>
 </body>
 </html>
