@@ -481,7 +481,62 @@ openByGet();
 <p>以下是自我練習的部分</p>
 <p><a href="/downloads/Plongeur Batteur_sldprt.7z">Plongeur Batteur_sldprt.7z</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/sXbR64WFHfM?si=-C1Zj1H5t1UyN8j5" title="YouTube video player" width="560"></iframe></p>
-<h3>stl</h3><h2>w12</h2>
+<h3>stl</h3>
+<p></p>
+<script src="/static/jsc3d.js" type="text/javascript"></script>
+<div id="models"><!-- 只保留一个 canvas --> <canvas height="300" id="cv1" style="border: 1px solid;" width="400"></canvas></div>
+<div style="width: 400px; height: 70px; border: 1px solid;">Model Color:<input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1:<input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2:<input id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
+<option>Flat</option>
+<option>Point</option>
+<option>Wireframe</option>
+<option>Smooth</option>
+</select>Definition:<select id="defini" onchange="changeOption('Definition',this.value)">
+<option>Standard</option>
+<option>low</option>
+<option>high</option>
+</select></div>
+<script type="text/javascript">
+var viewer;
+
+function getOptions(){
+    var mc = document.getElementById("mdlClr").value;
+    var bc1 = document.getElementById("bckClr1").value;
+    var bc2 = document.getElementById("bckClr2").value;
+    var ren = document.getElementById("render").value;
+    var def = document.getElementById("defini").value;
+    return {ModelColor: mc, BackgroundColor1: bc1, BackgroundColor2: bc2, RenderMode: ren, Definition: def};
+}
+
+function readSTLfile(opt){
+    var canvas = document.getElementById("cv1");
+    viewer = new JSC3D.Viewer(canvas);
+    viewer.setParameter('SceneUrl', opt.SceneUrl);
+    viewer.setParameter('InitRotationX', 0);
+    viewer.setParameter('InitRotationY', 0);
+    viewer.setParameter('InitRotationZ', 0);
+    viewer.setParameter('ModelColor', opt.ModelColor);
+    viewer.setParameter('BackgroundColor1', opt.BackgroundColor1);
+    viewer.setParameter('BackgroundColor2', opt.BackgroundColor2);
+    viewer.setParameter('RenderMode', opt.RenderMode);
+    viewer.setParameter('Definition', opt.Definition);
+    viewer.init();
+    viewer.update();
+}
+
+function changeOption(strOpt, strValue){
+    viewer.setParameter(strOpt, strValue);
+    viewer.update();
+}
+
+function openByGet(){
+    var modelUrl = "https://41223136@s104.cycu.org/~41223136/Plongeur_Batteur.stl"; // 替换为您的模型 URL
+    var opt = getOptions();
+    opt.SceneUrl = modelUrl;
+    readSTLfile(opt);
+}
+
+openByGet();
+</script><h2>w12</h2>
 <p>抽查w7、w10、w11_hw的頁面進度</p>
 <p>介紹solvespace功能及組合零件的技巧</p>
 <p>並以Solvespace進行組合零件</p>
